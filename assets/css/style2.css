@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Sen:wght@400..800&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Sen", sans-serif !important;
+
+}
+.color1 {
+    border-top-color: #D90A2C !important;
+}
+.btncolor{
+    background-color: #D90A2C !important;
+}
+.redcolor{
+    color: #D90A2C;
+}
+.bgcolor2{
+    background-color: #F2F2F2;
+}
+.breadcrumb-item a {
+    color: black; /* Default color for links */
+    text-decoration: none; /* Remove underline from links */
+}
+
+.breadcrumb-item a:hover {
+    color: #D90A2C; /* Change color on hover */
+}
+
+/* Active state */
+.active {
+    color: red; /* Color when active */
+    font-weight: bold; /* Optional: make it bold */
+}
+
