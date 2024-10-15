@@ -1,5 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Sen:wght@400..800&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+.font-sen {
+    font-family: "Sen", sans-serif;
+}
+.navigation{
+    height:300px
+}
+
+.mainBg {
+    background: url('../images/imagebgshape.png');
+    min-height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+.imgcover {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+.border_right {
+    border-right: 1px solid #e5e4e4;
+    padding-right: 0.5rem;
+    ;
+
 }
