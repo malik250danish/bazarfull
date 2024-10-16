@@ -1,57 +1,73 @@
 @import url('https://fonts.googleapis.com/css2?family=Sen:wght@400..800&display=swap');
 
-body{
+body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Sen", sans-serif !important;
 
 }
+
 .color1 {
     border-top-color: #D90A2C !important;
 }
-.btncolor{
+
+.btncolor {
     background-color: #D90A2C !important;
 }
-.redcolor{
+
+.redcolor {
     color: #D90A2C !important;
 }
-.bgcolor2{
+
+.bgcolor2 {
     background-color: #F2F2F2;
 }
+
 .breadcrumb-item a {
-    color: black; /* Default color for links */
-    text-decoration: none; /* Remove underline from links */
+    color: black;
+    /* Default color for links */
+    text-decoration: none;
+    /* Remove underline from links */
 }
 
 .breadcrumb-item a:hover {
-    color: #D90A2C; /* Change color on hover */
+    color: #D90A2C;
+    /* Change color on hover */
 }
 
 /* Active state */
 .active {
-    color: red !important; /* Color when active */
-    font-weight: bold; /* Optional: make it bold */
+    color: red !important;
+    /* Color when active */
+    font-weight: bold;
+    /* Optional: make it bold */
 }
 
-.myarrow:hover{
+.myarrow:hover {
     color: #D90A2C !important;
 }
-.myheart{
-    position:absolute;
-    left:85% ;
+
+.myheart {
+    position: absolute;
+    left: 85%;
     top: 5%;
-    display: inline-flex;
+    display: flex;
     align-items: center;
     justify-content: center;
-    width: 30px; /* Set width and height to control box size */
+    width: 30px;
+    /* Set width and height to control box size */
     height: 30px;
-    background-color: #000000; /* Optional: add background color */
+    background-color: #000000;
+    /* Optional: add background color */
 }
+
 @media (max-width: 768px) {
     .myheart {
-        left: 80%; /* Adjusts icon position on smaller screens */
-        top: 8%; /* Adjusts vertical positioning */
+        left: 80%;
+        /* Adjusts icon position on smaller screens */
+        top: 8%;
+        /* Adjusts vertical positioning */
         width: 25px;
         height: 25px;
     }
@@ -59,36 +75,46 @@ body{
 
 @media (max-width: 480px) {
     .myheart {
-        left: 75%; /* Further adjusts icon position on very small screens */
+        left: 75%;
+        /* Further adjusts icon position on very small screens */
         top: 10%;
         width: 20px;
         height: 20px;
     }
 }
 
-.arrow-wrapper{
-    position:absolute;
-    left:87% ;
+.arrow-wrapper {
+    position: absolute;
+    left: 87%;
     top: 70%;
-    font-size: 2vw; /* Use viewport width to make it responsive */
+    font-size: 2vw;
+    /* Use viewport width to make it responsive */
     color: white;
     transform: translate(-50%, -50%);
 }
-.myarrow2:hover{
+
+.myarrow2:hover {
     color: #D90A2C !important;
 }
+
 @media (max-width: 768px) {
     .arrow-wrapper {
-        left: 75%; /* Adjust for smaller screens */
-        top: 65%;  /* Adjust for smaller screens */
-        font-size: 6vw; /* Increase size slightly for smaller devices */
+        left: 75%;
+        /* Adjust for smaller screens */
+        top: 65%;
+        /* Adjust for smaller screens */
+        font-size: 6vw;
+        /* Increase size slightly for smaller devices */
     }
 }
 
 @media (max-width: 576px) {
     .arrow-wrapper {
-        left: 70%; /* Further adjust for very small screens */
-        top: 60%;  /* Further adjust for very small screens */
-        font-size: 8vw; /* Make them larger for very small screens */
+        left: 70%;
+        /* Further adjust for very small screens */
+        top: 60%;
+        /* Further adjust for very small screens */
+        font-size: 8vw;
+        /* Make them larger for very small screens */
     }
 }

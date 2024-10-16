@@ -16,42 +16,87 @@
     />
     <!-- custom css -->
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/style2.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
   </head>
   <body>
     <!-- navbar -->
-    <nav class="navbar navbar-expand-lg bg-black text-white">
-      <div class="container text-white">
-        <a class="navbar-brand" href="#"
-          ><img src="./assets/images/logo.png" width="100px" alt=""
-        /></a>
+    <!-- MY HEADER  -->
+    <nav
+      class="navbar navbar-expand-lg bg-black text-white border-top border-3 color1"
+      data-bs-theme="dark"
+    >
+      <div class="container">
+        <a class="navbar-brand text-white fs-2 fw-semibold" href="index2.html"
+          >BazarFul</a
+        >
+        <div class="d-flex align-items-center justify-content-end">
+          <i class="fa-solid fa-heart"></i>
+          <span class="px-3"> &euro; 0.00 </span>
+          <i class="fa-solid fa-bag-shopping pe-5"></i>
+          <button class="btn btncolor me-2" type="button">Sign Up</button>
+          <button class="btn bg-white text-dark" type="button">Log In</button>
+        </div>
+      </div>
+    </nav>
+    <nav
+      class="navbar navbar-expand-lg border-bottom shadow-lg p-3 bg-body-tertiary"
+    >
+      <div class="container">
+        <!-- Toggler for mobile view -->
         <button
           class="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
-          data-bs-target="#navbarNavAltMarkup"
-          aria-controls="navbarNavAltMarkup"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div
-          class="collapse navbar-collapse text-white"
-          id="navbarNavAltMarkup"
-        >
-          <div class="navbar-nav ms-auto text-white">
-            <a class="nav-link text-white active" aria-current="page" href="#"
-              >Home</a
-            >
-            <a class="nav-link text-white" href="#">Features</a>
-            <a class="nav-link text-white" href="#">Pricing</a>
-            <a class="nav-link text-white disabled" aria-disabled="true"
-              >Disabled</a
-            >
-          </div>
+
+        <!-- Collapsible content -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul
+            class="navbar-nav me-auto mb-2 mb-lg-0 d-flex gap-5 align-items-center justify-content-center"
+          >
+            <li class="nav-item">
+              <a class="nav-link active" href="./index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./menswear.html">Menswear</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./womenswear.html">Womenswear</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <div class="input-group">
+              <span class="input-group-text bg-white border-0">
+                <i class="fa-solid fa-magnifying-glass text-dark"></i>
+              </span>
+              <input
+                class="form-control me-2 border-0"
+                type="search"
+                placeholder="Search for"
+                aria-label="Search"
+              />
+              <button
+                class="btn btncolor text-white rounded-3 border-0 px-3"
+                type="submit"
+              >
+                Search
+              </button>
+            </div>
+          </form>
         </div>
       </div>
     </nav>
+
     <!-- main -->
     <main>
       <div class="container-fluid mainBg">
@@ -591,10 +636,203 @@
           <!-- End of col-8 -->
         </div>
       </div>
+      <!-- MAIN BODY  -->
+      <div class="bgcolor2">
+        <div class="container py-5">
+          <h3 class="redcolor">RECENT PRODUCT</h3>
+          <div class="d-flex justify-content-between align-items-center">
+            <h1 class="fw-bold">Most Products</h1>
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb mb-0">
+                <li class="breadcrumb-item">
+                  <a
+                    href="#"
+                    class="breadcrumb-link active"
+                    onclick="setActive(this)"
+                    >All Shows</a
+                  >
+                </li>
+                <li class="breadcrumb-item">
+                  <a href="#" onclick="setActive(this)">Menswear</a>
+                </li>
+                <li class="breadcrumb-item">
+                  <a href="#" class="pe-5" onclick="setActive(this)"
+                    >Womenswear</a
+                  >
+                  <!-- Left and Right Arrows -->
+                  <i
+                    class="fa-solid fa-arrow-left-long px-3 myarrow"
+                    onclick="moveLeft()"
+                  ></i>
+                  <i
+                    class="fa-solid fa-arrow-right-long myarrow"
+                    onclick="moveRight()"
+                  ></i>
+                </li>
+              </ol>
+            </nav>
+          </div>
+
+          <div class="card-group gap-5">
+            <div class="card border rounded-0">
+              <span class="myheart">
+                <i
+                  class="fa-regular fa-heart text-white"
+                  onclick="toggleHeartColor(this)"
+                ></i
+              ></span>
+
+              <img
+                id="productImage1"
+                src="./assets/images/shape (1).png"
+                class="card-img-top rounded-0"
+                alt="..."
+              />
+              <div class="arrow-wrapper d-flex justify-content-center gap-2">
+                <i
+                  class="fa-solid fa-arrow-left-long myarrow2"
+                  onclick="changeImage('left', 1)"
+                ></i>
+                <i
+                  class="fa-solid fa-arrow-right-long myarrow2"
+                  onclick="changeImage('right', 1)"
+                ></i>
+              </div>
+              <div class="card-body">
+                <div class="d-flex justify-content-between">
+                  <p class="card-text">Other</p>
+                  <p class="redcolor">&dollar;10.00</p>
+                </div>
+                <h5 class="card-title">Men's Black T-shirt</h5>
+              </div>
+            </div>
+            <div class="card border rounded-0">
+              <span class="myheart">
+                <i
+                  class="fa-regular fa-heart text-white"
+                  onclick="toggleHeartColor(this)"
+                ></i>
+              </span>
+              <img
+                id="productImage2"
+                src="./assets/images/shape (2).png"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="arrow-wrapper d-flex justify-content-center gap-2">
+                <i
+                  class="fa-solid fa-arrow-left-long myarrow2"
+                  onclick="changeImage('left', 2)"
+                ></i>
+                <i
+                  class="fa-solid fa-arrow-right-long myarrow2"
+                  onclick="changeImage('right', 2)"
+                ></i>
+              </div>
+              <div class="card-body">
+                <div class="d-flex justify-content-between">
+                  <p class="card-text">Gildan</p>
+                  <p class="redcolor">&dollar;10.00</p>
+                </div>
+                <h5 class="card-title">Men's Black & Navy Hoodie</h5>
+              </div>
+            </div>
+            <div class="card border rounded-0">
+              <span class="myheart">
+                <i
+                  class="fa-regular fa-heart text-white"
+                  onclick="toggleHeartColor(this)"
+                ></i>
+              </span>
+              <img
+                id="productImage3"
+                src="./assets/images/shape.png"
+                class="card-img-top rounded-0"
+                alt="..."
+              />
+              <div class="arrow-wrapper d-flex justify-content-center gap-2">
+                <i
+                  class="fa-solid fa-arrow-left-long myarrow2"
+                  onclick="changeImage('left', 3)"
+                ></i>
+                <i
+                  class="fa-solid fa-arrow-right-long myarrow2"
+                  onclick="changeImage('right', 3)"
+                ></i>
+              </div>
+              <div class="card-body">
+                <div class="d-flex justify-content-between">
+                  <p class="card-text">Dickies</p>
+                  <p class="redcolor">&dollar;10.00</p>
+                </div>
+                <h5 class="card-title">Men's Brown Trousers</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- My FOOTERS  -->
+      <div class="navbar-nav bg-white p-3">
+        <div class="container">
+          <div class="row justify-content-center align-items-start mx-0">
+            <div class="col-md-2 text-center">
+              <h1>BazarFul</h1>
+              <p>dem0@gmail.com</p>
+            </div>
+            <div class="col-md-2 text-center">
+              <h1 class="fs-4">Depop</h1>
+              <ul class="list-unstyled fw-light">
+                <li>About us</li>
+                <li>Careers</li>
+                <li>Blogs</li>
+                <li>News</li>
+                <li>Impact</li>
+              </ul>
+            </div>
+            <div class="col-md-2 text-center">
+              <h1 class="fs-4">Help</h1>
+              <ul class="list-unstyled fw-light">
+                <li>Help Center</li>
+                <li>Safety Center</li>
+                <li>Depop Status</li>
+              </ul>
+            </div>
+            <div class="col-md-2 text-center">
+              <h1 class="fs-4">Subscribe</h1>
+              <p class="fw-light">Signup for our latest Collections</p>
+              <form class="d-flex" role="search">
+                <input
+                  class="border"
+                  type="search"
+                  placeholder="Enter Your email"
+                  aria-label="Search"
+                />
+                <button class="btncolor text-white border-0 px-2" type="submit">
+                  Send
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-fluid bg-black w-100">
+        <footer
+          class="d-flex flex-wrap justify-content-center align-items-center py-4 text-center"
+        >
+          <div class="col-md-12">
+            <span class="mb-3 fw-light text-white"
+              >Copyright © 2024 All Rights Reserved</span
+            >
+          </div>
+        </footer>
+      </div>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./script.js"></script>
 
     <!-- Initialize Swiper -->
     <script>
