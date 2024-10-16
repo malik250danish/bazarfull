@@ -24,84 +24,113 @@
             </div>
         </div>
     </nav>
-    <nav class="navbar border-bottom shadow-lg p-3 bg-body-tertiary">
-        <div class="container ">
-            <ul class="d-flex gap-5 align-items-center justify-content-center">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Menswear</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Womenswear</a>
-                </li>
-            </ul>
-            <form class="d-flex" role="search">
-                <div class="input-group">
-                    <span class="input-group-text bg-white border-0">
-                        <i class="fa-solid fa-magnifying-glass text-dark"></i>
-                    </span>
-                    <input class="form-control me-2 border-0 " type="search" placeholder="Search for"
-                        aria-label="Search">
-                    <button class="ms-2 btncolor text-white rounded-3 border-0 px-3 " type="submit">Search</button>
-                </div>
-            </form>
+    <nav class="navbar navbar-expand-lg border-bottom shadow-lg p-3 bg-body-tertiary">
+        <div class="container">    
+            <!-- Toggler for mobile view -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <!-- Collapsible content -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex gap-5 align-items-center justify-content-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Menswear</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Womenswear</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <div class="input-group">
+                        <span class="input-group-text bg-white border-0">
+                            <i class="fa-solid fa-magnifying-glass text-dark"></i>
+                        </span>
+                        <input class="form-control me-2 border-0" type="search" placeholder="Search for" aria-label="Search">
+                        <button class="btn btncolor text-white rounded-3 border-0 px-3" type="submit">Search</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </nav>
-
+    
     <!-- MAIN BODY  -->
-     <div class="bgcolor2">
-     <div class="container p-5 ">
-    <h3 class="redcolor">RECENT PRODUCT</h3>
-    <div class="d-flex justify-content-between align-items-center">
-        <h1 class="fw-bold">Most Products</h1>
-        <nav aria-label="breadcrumb">
-            <ol class="breadcrumb mb-0">
-                <li class="breadcrumb-item">
-                    <a href="#" class="breadcrumb-link" onclick="setActive(this)">All Shows</a>
-                </li>
-                <li class="breadcrumb-item"><a href="#">Menswear</a></li>
-                <li class="breadcrumb-item"><a href="#">Womenswear</a></li>
-            </ol>
-        </nav>        
+    <div class="bgcolor2">
+        <div class="container py-5">
+            <h3 class="redcolor">RECENT PRODUCT</h3>
+            <div class="d-flex justify-content-between align-items-center">
+                <h1 class="fw-bold">Most Products</h1>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb mb-0">
+                        <li class="breadcrumb-item">
+                            <a href="#" class="breadcrumb-link active" onclick="setActive(this)">All Shows</a>
+                        </li>
+                        <li class="breadcrumb-item">
+                            <a href="#" onclick="setActive(this)">Menswear</a>
+                        </li>
+                        <li class="breadcrumb-item">
+                            <a href="#" class="pe-5" onclick="setActive(this)">Womenswear</a>
+                            <!-- Left and Right Arrows -->
+                            <i class="fa-solid fa-arrow-left-long px-3 myarrow" onclick="moveLeft()"></i>
+                            <i class="fa-solid fa-arrow-right-long myarrow" onclick="moveRight()"></i>
+                        </li>
+                    </ol>
+                </nav>
+            </div>
+            
+
+            <div class="card-group gap-5">
+                <div class="card border rounded-0">
+                    <i class="fa-regular fa-heart text-white myheart " onclick="toggleHeartColor(this)"></i>
+                    <img src="./assets/images/shape (1).png" class="card-img-top rounded-0" alt="...">
+                    <div class="arrow-wrapper d-flex justify-content-center gap-2">
+                        <i class="fa-solid fa-arrow-left-long myarrow2"></i>
+                        <i class="fa-solid fa-arrow-right-long myarrow2"></i>
+                    </div>
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between">
+                            <p class="card-text">Other</p>
+                            <p class="redcolor">&dollar;10.00</p>
+                        </div>
+                        <h5 class="card-title">Men's Black T-shirt</h5>
+                    </div>
+                </div>
+                <div class="card border rounded-0">
+                    <i class="fa-regular fa-heart text-white myheart " onclick="toggleHeartColor(this)"></i>
+                    <img src="./assets/images/shape (2).png" class="card-img-top" alt="...">
+                    <div class="arrow-wrapper d-flex justify-content-center gap-2">
+                        <i class="fa-solid fa-arrow-left-long myarrow2"></i>
+                        <i class="fa-solid fa-arrow-right-long myarrow2"></i>
+                    </div>
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between">
+                            <p class="card-text">Gildan</p>
+                            <p class="redcolor">&dollar;10.00</p>
+                        </div>
+                        <h5 class="card-title">Men's Black & Navy Hoodie</h5>
+                    </div>
+                </div>
+                <div class="card border rounded-0">
+                    <i class="fa-regular fa-heart text-white myheart " onclick="toggleHeartColor(this)"></i>
+                    <img src="./assets/images/shape.png" class="card-img-top rounded-0" alt="...">
+                    <div class="arrow-wrapper d-flex justify-content-center gap-2">
+                        <i class="fa-solid fa-arrow-left-long myarrow2"></i>
+                        <i class="fa-solid fa-arrow-right-long myarrow2"></i>
+                    </div>
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between">
+                            <p class="card-text">Dickies</p>
+                            <p class="redcolor">&dollar;10.00</p>
+                        </div>
+                        <h5 class="card-title">Men's Brown Trousers</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    
-    
-    <div class="container card-group gap-5 bgcolor2">
-        <div class="card border rounded-0">
-            <img src="./assets/images/shape (1).png" class="card-img-top rounded-0" alt="...">
-            <div class="card-body">
-                <div class="d-flex justify-content-between">
-                    <p class="card-text">Other</p>
-                    <p class="redcolor">&dollar;10.00</p>
-                </div>
-                <h5 class="card-title">Men's Black T-shirt</h5>
-            </div>
-        </div>
-        <div class="card border rounded-0">
-            <img src="./assets/images/shape (2).png" class="card-img-top" alt="...">
-            <div class="card-body">
-                <div class="d-flex justify-content-between">
-                    <p class="card-text">Gildan</p>
-                    <p class="redcolor">&dollar;10.00</p>
-                </div>
-                <h5 class="card-title">Men's Black & Navy Hoodie</h5>
-            </div>
-        </div>
-        <div class="card border rounded-0">
-            <img src="./assets/images/shape.png" class="card-img-top rounded-0" alt="...">
-            <div class="card-body">
-                <div class="d-flex justify-content-between">
-                    <p class="card-text">Dickies</p>
-                    <p class="redcolor">&dollar;10.00</p>
-                </div>
-                <h5 class="card-title">Men's Brown Trousers</h5>
-            </div>
-        </div>
-    </div>
-</div>
-</div>
 
     <!-- My FOOTERS  -->
     <div class="navbar-nav bg-white p-3 ">
@@ -151,6 +180,7 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./script.js"></script>
 </body>
 
 </html>

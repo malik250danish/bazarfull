@@ -14,7 +14,7 @@ body{
     background-color: #D90A2C !important;
 }
 .redcolor{
-    color: #D90A2C;
+    color: #D90A2C !important;
 }
 .bgcolor2{
     background-color: #F2F2F2;
@@ -30,7 +30,65 @@ body{
 
 /* Active state */
 .active {
-    color: red; /* Color when active */
+    color: red !important; /* Color when active */
     font-weight: bold; /* Optional: make it bold */
 }
 
+.myarrow:hover{
+    color: #D90A2C !important;
+}
+.myheart{
+    position:absolute;
+    left:85% ;
+    top: 5%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px; /* Set width and height to control box size */
+    height: 30px;
+    background-color: #000000; /* Optional: add background color */
+}
+@media (max-width: 768px) {
+    .myheart {
+        left: 80%; /* Adjusts icon position on smaller screens */
+        top: 8%; /* Adjusts vertical positioning */
+        width: 25px;
+        height: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .myheart {
+        left: 75%; /* Further adjusts icon position on very small screens */
+        top: 10%;
+        width: 20px;
+        height: 20px;
+    }
+}
+
+.arrow-wrapper{
+    position:absolute;
+    left:87% ;
+    top: 70%;
+    font-size: 2vw; /* Use viewport width to make it responsive */
+    color: white;
+    transform: translate(-50%, -50%);
+}
+.myarrow2:hover{
+    color: #D90A2C !important;
+}
+@media (max-width: 768px) {
+    .arrow-wrapper {
+        left: 75%; /* Adjust for smaller screens */
+        top: 65%;  /* Adjust for smaller screens */
+        font-size: 6vw; /* Increase size slightly for smaller devices */
+    }
+}
+
+@media (max-width: 576px) {
+    .arrow-wrapper {
+        left: 70%; /* Further adjust for very small screens */
+        top: 60%;  /* Further adjust for very small screens */
+        font-size: 8vw; /* Make them larger for very small screens */
+    }
+}
