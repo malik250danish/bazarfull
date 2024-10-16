@@ -87,3 +87,42 @@ function changeImage(direction, productNumber) {
     // Update the image src based on the current index
     document.getElementById(`productImage${productNumber}`).src = productImages[productNumber][currentImageIndex[productNumber]];
 }
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const cards = document.querySelectorAll('.card-item'); // Select all card items
+    const loadMoreBtn = document.getElementById('load-more');
+    const cardCountDisplay = document.getElementById('card-count');
+    const cardTotalDisplay = document.getElementById('card-total');
+
+    let cardsShown = 0; // Keep track of how many cards are shown
+    const cardsToShow = 3; // Number of cards to show on each click
+    const totalCards = cards.length; // Total number of cards
+
+    // Initially hide all cards
+    cards.forEach(card => card.style.display = 'none');
+
+    // Update total cards count
+    cardTotalDisplay.textContent = totalCards;
+
+    // Function to show the next set of cards
+    function showNextCards() {
+        const nextCards = cardsShown + cardsToShow; // Calculate how many cards to show next
+        for (let i = cardsShown; i < nextCards && i < totalCards; i++) {
+            cards[i].style.display = 'block'; // Show the card
+        }
+        cardsShown = Math.min(nextCards, totalCards); // Update the number of shown cards
+        cardCountDisplay.textContent = cardsShown; // Update the count display
+
+        // Hide "Load More" button if all cards are shown
+        if (cardsShown === totalCards) {
+            loadMoreBtn.style.display = 'none';
+        }
+    }
+
+    // Show the first set of cards on page load
+    showNextCards();
+
+    // Load more cards when the button is clicked
+    loadMoreBtn.addEventListener('click', showNextCards);
+});
