@@ -9,8 +9,9 @@
 .font-sen {
     font-family: "Sen", sans-serif;
 }
-.navigation{
-    height:300px
+
+.navigation {
+    height: 300px
 }
 
 .mainBg {
@@ -32,4 +33,36 @@
     padding-right: 0.5rem;
     ;
 
+}
+
+.bgcard1 {
+    background: url("../images/bgc.png");
+    background-size: cover;
+    width: 100%;
+    background-repeat: no-repeat;
+    /* height: 300px; */
+}
+
+.bgcard4 {
+    background: url("../images/bg4.png");
+    background-size: cover;
+    width: 100%;
+    background-repeat: no-repeat;
+    /* height: 300px; */
+}
+
+.bgcard2 {
+    background: url("../images/bg2.png");
+    background-size: cover;
+    width: 100%;
+    background-repeat: no-repeat;
+    /* height: 300px; */
+}
+
+.nav-buttons button {
+    border: 0;
+}
+
+.h-fit {
+    height: fit-content !important;
 }
