@@ -84,11 +84,11 @@
 
             <div class="card-group gap-5">
                 <div class="card border rounded-0">
-                    <i class="fa-regular fa-heart text-white myheart " onclick="toggleHeartColor(this)"></i>
-                    <img src="./assets/images/shape (1).png" class="card-img-top rounded-0" alt="...">
+                    <i class="fa-regular fa-heart text-white myheart" onclick="toggleHeartColor(this)"></i>
+                    <img id="productImage1" src="./assets/images/shape (1).png" class="card-img-top rounded-0" alt="...">
                     <div class="arrow-wrapper d-flex justify-content-center gap-2">
-                        <i class="fa-solid fa-arrow-left-long myarrow2"></i>
-                        <i class="fa-solid fa-arrow-right-long myarrow2"></i>
+                        <i class="fa-solid fa-arrow-left-long myarrow2" onclick="changeImage('left', 1)"></i>
+                        <i class="fa-solid fa-arrow-right-long myarrow2" onclick="changeImage('right', 1)"></i>
                     </div>
                     <div class="card-body">
                         <div class="d-flex justify-content-between">
@@ -99,11 +99,11 @@
                     </div>
                 </div>
                 <div class="card border rounded-0">
-                    <i class="fa-regular fa-heart text-white myheart " onclick="toggleHeartColor(this)"></i>
-                    <img src="./assets/images/shape (2).png" class="card-img-top" alt="...">
+                    <i class="fa-regular fa-heart text-white myheart" onclick="toggleHeartColor(this)"></i>
+                    <img id="productImage2" src="./assets/images/shape (2).png" class="card-img-top" alt="...">
                     <div class="arrow-wrapper d-flex justify-content-center gap-2">
-                        <i class="fa-solid fa-arrow-left-long myarrow2"></i>
-                        <i class="fa-solid fa-arrow-right-long myarrow2"></i>
+                        <i class="fa-solid fa-arrow-left-long myarrow2" onclick="changeImage('left', 2)"></i>
+                        <i class="fa-solid fa-arrow-right-long myarrow2" onclick="changeImage('right', 2)"></i>
                     </div>
                     <div class="card-body">
                         <div class="d-flex justify-content-between">
@@ -114,11 +114,11 @@
                     </div>
                 </div>
                 <div class="card border rounded-0">
-                    <i class="fa-regular fa-heart text-white myheart " onclick="toggleHeartColor(this)"></i>
-                    <img src="./assets/images/shape.png" class="card-img-top rounded-0" alt="...">
+                    <i class="fa-regular fa-heart text-white myheart" onclick="toggleHeartColor(this)"></i>
+                    <img id="productImage3" src="./assets/images/shape.png" class="card-img-top rounded-0" alt="...">
                     <div class="arrow-wrapper d-flex justify-content-center gap-2">
-                        <i class="fa-solid fa-arrow-left-long myarrow2"></i>
-                        <i class="fa-solid fa-arrow-right-long myarrow2"></i>
+                        <i class="fa-solid fa-arrow-left-long myarrow2" onclick="changeImage('left', 3)"></i>
+                        <i class="fa-solid fa-arrow-right-long myarrow2" onclick="changeImage('right', 3)"></i>
                     </div>
                     <div class="card-body">
                         <div class="d-flex justify-content-between">
@@ -129,6 +129,7 @@
                     </div>
                 </div>
             </div>
+            
         </div>
     </div>
 

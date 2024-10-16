@@ -53,3 +53,37 @@ function toggleHeartColor(icon) {
         icon.classList.add("fa-regular");
     }
 }
+
+// Array of images for each product
+const productImages = {
+    1: [
+        './assets/images/shape (1).png',
+        './assets/images/shape (2).png', // Add more images for the first product
+    ],
+    2: [
+        './assets/images/shape (2).png',
+        './assets/images/shape.png', // Add more images for the second product
+    ],
+    3: [
+        './assets/images/shape.png',
+        './assets/images/shape (2).png', // Add more images for the third product
+    ],
+};
+
+const currentImageIndex = {
+    1: 0,
+    2: 0,
+    3: 0,
+};
+
+// Function to change image based on direction and product number
+function changeImage(direction, productNumber) {
+    if (direction === 'left') {
+        currentImageIndex[productNumber] = (currentImageIndex[productNumber] > 0) ? currentImageIndex[productNumber] - 1 : productImages[productNumber].length - 1;
+    } else if (direction === 'right') {
+        currentImageIndex[productNumber] = (currentImageIndex[productNumber] < productImages[productNumber].length - 1) ? currentImageIndex[productNumber] + 1 : 0;
+    }
+
+    // Update the image src based on the current index
+    document.getElementById(`productImage${productNumber}`).src = productImages[productNumber][currentImageIndex[productNumber]];
+}
