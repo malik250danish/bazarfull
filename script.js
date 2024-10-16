@@ -126,3 +126,10 @@ document.addEventListener("DOMContentLoaded", function () {
     // Load more cards when the button is clicked
     loadMoreBtn.addEventListener('click', showNextCards);
 });
+
+var swiper = new Swiper(".mySwiper", {
+    navigation: {
+      nextEl: ".swipe-pre",
+      prevEl: ".swipe-nex",
+    },
+  });
