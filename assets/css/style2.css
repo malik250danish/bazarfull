@@ -92,3 +92,12 @@ body{
         font-size: 8vw; /* Make them larger for very small screens */
     }
 }
+a{
+    color: inherit; 
+    text-decoration: none !important;
+}
+
+/* Specifically remove borders for specific rows */
+.table tbody tr:nth-last-child(-n+3) td {
+    border: none; /* This will keep the last 3 rows (Price, Tax, Total) borderless */
+}
